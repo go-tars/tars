@@ -33,8 +33,8 @@ cd $GOPATH/src/github.com/go-tars/demo
 make
 ```
 
-3. test
+3. run test
 
 ```
-make test
+make run_test
 ```

@@ -10,7 +10,7 @@ build:
 run:
 	./{{.Server}} --config=config.conf
 
-test:
+run_test:
 	go run test/test.go --config config.conf
 `
 )
