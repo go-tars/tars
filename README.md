@@ -16,7 +16,7 @@ Also required:
 
 ```bash
 tars new --app tars --server DemoServer --servant DemoApi --gopath github.com/go-tars/demo
-cd $GOPATH/github.com/go-tars/demo
+cd $GOPATH/src/github.com/go-tars/demo
 ./start.sh
 ```
 
