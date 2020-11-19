@@ -1,15 +1,16 @@
 package template
 
 var (
-	Makefile = `APP       := {{.App}}
-TARGET    := {{.Server}}
-MFLAGS    :=
-DFLAGS    :=
-CONFIG    := client
-STRIP_FLAG:= N
-J2GO_FLAG:= 
+	Makefile = `all: build run
 
-libpath=${subst :, ,$(GOPATH)}
-$(foreach path,$(libpath),$(eval -include $(path)/src/github.com/TarsCloud/TarsGo/tars/makefile.tars.gomod))
+build:
+	tars2go -outdir=tars-protocol -module=github.com/go-tars/demo *.tars
+	go build -o {{.Server}}
+
+run:
+	./{{.Server}} --config=config.conf
+
+test:
+	go run test/test.go --config config.conf
 `
 )

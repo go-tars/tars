@@ -188,7 +188,6 @@ func Run(ctx *cli.Context) {
 		{"client/client.go", tmpl.Client},
 		{c.Servant + "_imp.go", tmpl.ServantImp},
 		{c.Servant + ".tars", tmpl.ServantTars},
-		{"start.sh", tmpl.StartSh},
 		{"test/test.go", tmpl.Test},
 		{"Makefile", tmpl.Makefile},
 		{".gitignore", tmpl.GitIgnore},
