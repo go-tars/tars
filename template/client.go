@@ -7,13 +7,13 @@ import (
 
 	"github.com/TarsCloud/TarsGo/tars"
 
-	"{{.App}}"
+	"{{.Module}}/tars-protocol/{{.App}}"
 )
 
 func main() {
 	comm := tars.NewCommunicator()
 	obj := fmt.Sprintf("{{.App}}.{{.Server}}.{{.Servant}}Obj@tcp -h 127.0.0.1 -p 10015 -t 60000")
-	app := new({{.App}}.{{.Server}})
+	app := new({{.App}}.{{.Servant}})
 	comm.StringToProxy(obj, app)
 	var out, i int32
 	i = 123
